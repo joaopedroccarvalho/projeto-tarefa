@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="assets/imagens/icon.png" alt=""></h2>
+            <div class="row">
+                <button onclick="abrirModal()" id="addtarefa">Adicionar</button>
+            </div>
+            <ul id="listContainer">
+                <li class="tarefa">
+                    <div class="info">
+                        <div class="descricao">Terminar o projeto to-do list</div>
+                        <div class="data">Data: 01/01/2023</div>
+                        <div class="prioridade">Prioridade: Alta</div>
+                    </div>
+                    <span class="buttonExcluir">x</span>
+                </li>
+                <!-- Outras tarefas aqui -->
+            </ul>
+        </div>
+
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" class="close" id="closeModalBtn">&times;</span>
+              <h2>Tarefa</h2>
+              <form id="taskForm">
+                <label for="description">Descrição:</label>
+                <input type="text" id="tarefa" name="description" required>
+          
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+          
+                <label for="priority">Prioridade:</label>
+                <select id="priority" name="priority" required>
+                  <option value="alta">Alta</option>
+                  <option value="media">Media</option>
+                  <option value="baixa">Baixa</option>
+                </select>
+          
+                <button onclick="addTarefa()" type="submit">Adicionar Tarefa</button>
+              </form>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
